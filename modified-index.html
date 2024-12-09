@@ -6,6 +6,40 @@
     <title>WanderFocus</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
+        /* CSS for header background */
+        #header {
+            background-image: url('images/header-background.jpg'); /* Replace with the path to your image */
+            background-size: cover;
+            background-position: center;
+            height: 300px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        #header #logo img {
+            max-width: 150px;
+        }
+
+        #header #navigation ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+        }
+
+        #header #navigation ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        #header #navigation ul li a:hover {
+            text-decoration: underline;
+        }
+
         /* CSS for modal popup */
         #modal-overlay {
             position: fixed;
@@ -121,8 +155,7 @@
             </a>
             <div id="navigation">
                 <ul>
-                    <li class="selected"><a href="modified-index.html">Home</a>
-                    </li>
+                    <li class="selected"><a href="modified-index.html">Home</a></li>
                     <li><a href="work.html">Work</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
@@ -138,7 +171,6 @@
                 <p>
                     Hello! WanderFocus is a space dedicated to celebrating the beauty of traveling and capturing moments through the lens of a camera. Explore the world, one frame at a time, and discover the stories behind each destination.
                 </p>
-                
                 <p>
                     Join me as I share my adventures, tips, and snapshots from breathtaking locations around the globe. Whether you're an avid traveler or an aspiring photographer, there's something here for everyone!
                 </p>
@@ -148,34 +180,17 @@
                 <ul>
                     <li>
                         <strong>Popup Modal Integration:</strong> 
-                        I introduced an interactive popup modal powered by JavaScript. This feature enhances user engagement by prompting users with questions or displaying important information in a sleek, non-intrusive way. The modal design is responsive and blends seamlessly with the overall theme.
+                        I introduced an interactive popup modal powered by JavaScript. This feature enhances user engagement by prompting users with questions or displaying important information in a sleek, non-intrusive way.
                     </li>
                     <li>
                         <strong>Custom Fonts and Colors:</strong> 
-                        The website’s fonts were carefully chosen to improve readability and align with the brand’s personality. A combination of modern typography and vibrant colors was implemented to make the content more visually appealing. Colors were adjusted for consistency, ensuring harmonious visuals across the website.
+                        The website’s fonts were carefully chosen to improve readability and align with the brand’s personality.
                     </li>
                     <li>
                         <strong>Image Inclusion and Optimization:</strong> 
-                        High-quality, optimized images were included across various sections to make the website more dynamic and engaging. From the header logo to the featured images and galleries, each picture was curated to fit the design theme while maintaining fast loading times.
-                    </li>
-                    <li>
-                        <strong>Enhanced Footer Design:</strong> 
-                        The footer was redesigned with navigation links, social media icons, and copyright information to provide a polished and professional look. I also ensured the footer maintains a consistent style across all pages for a cohesive user experience.
-                    </li>
-                    <li>
-                        <strong>Interactive Navigation and Responsive Layout:</strong> 
-                        The navigation bar was styled to include hover effects, improving usability and aesthetics. A responsive layout was implemented to ensure the website is accessible and visually consistent across devices, from desktops to mobile phones.
-                    </li>
-                    <li>
-                        <strong>Consistent Page Designs:</strong> 
-                        Each page (Home, Work, Blog, About, and Contact) was individually styled and refined to reflect its purpose. Consistency in design elements like colors, fonts, and layout ensures users have a unified experience no matter where they navigate.
-                    </li>
-                    <li>
-                        <strong>Dynamic Content Updates:</strong> 
-                        Using a mix of HTML and CSS, I added text enhancements, content sections, and interactive elements like buttons. The featured gallery showcases recent updates with hover effects to encourage interaction.
+                        High-quality, optimized images were included across various sections to make the website more dynamic and engaging.
                     </li>
                 </ul>
-                
             </div>
             <div id="featured">
                 <h5>Recent Updates</h5>
@@ -191,8 +206,6 @@
                     </li>
                 </ul>
             </div>
-            
-            
         </div>
         <div id="footer">
             <div id="connect">
@@ -206,12 +219,9 @@
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-            <p class="uppercase">
-                Rahman Nymur - Student ID: 23229593
-            </p>
+            <p class="uppercase">Rahman Nymur - Student ID: 23229593</p>
         </div>
     </div>
-
     <div id="modal-overlay">
         <div id="modal">
             <h3>What is your favorite travel destination?</h3>
@@ -220,11 +230,5 @@
             <p id="modal-message" style="margin-top: 15px;"></p>
         </div>
     </div>
-    
-    
-</div>
-
-    </div>
 </body>
 </html>
-
