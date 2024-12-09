@@ -3,115 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderFocus</title>
+    <title>WanderFocus - Modified Index</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
-        /* CSS for modal popup */
-        #modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            visibility: hidden;
-            opacity: 0;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+        /* Dark Green Theme for Modified Index */
+
+        body {
+            background-color: #012a12; /* Dark green background */
+            color: #f0f0f0; /* Light gray text */
         }
 
-        #modal-overlay.visible {
-            visibility: visible;
-            opacity: 1;
+        #header {
+            background-color: #103d29; /* Deep green */
+            color: white;
+        }
+
+        #navigation ul li a:hover {
+            color: #a0f1b8; /* Soft green hover color */
+        }
+
+        #contents {
+            background-color: #1e4d34; /* Neutral dark green */
+        }
+
+        button {
+            background-color: #2b8754; /* Bright green button */
+        }
+
+        button:hover {
+            background-color: #1e6a3f; /* Slightly darker green */
+        }
+
+        #gallery img:hover {
+            box-shadow: 0 8px 20px rgba(0, 43, 25, 0.5); /* Green shadow */
+        }
+
+        h5 {
+            color: #a0f1b8; /* Soft pastel green */
+        }
+
+        #footer {
+            background-color: #0a2c19; /* Very dark green */
+        }
+
+        #footer a:hover {
+            color: #66a987; /* Slightly darker green on hover */
+        }
+
+        #modal-overlay {
+            background: rgba(0, 43, 25, 0.8); /* Dark green overlay */
         }
 
         #modal {
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            text-align: center;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            width: 300px;
-            z-index: 1100;
+            background: #f9fff8; /* Light greenish white */
+        }
+
+        #modal h3 {
+            color: #003d24; /* Dark green text */
         }
 
         #modal input {
-            width: 80%;
-            padding: 8px;
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
+            border: 1px solid #005c37; /* Dark green border */
+            background: #e8f5eb; /* Light green background */
         }
 
         #modal button {
-            margin-top: 15px;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
+            background-color: #2b8754; /* Green button */
         }
 
         #modal button:hover {
-            background-color: #0056b3;
+            background-color: #1e6a3f; /* Darker green button */
         }
 
-        /* Blur background when modal is active */
-        #page.modal-blur {
-            filter: blur(5px);
-            pointer-events: none;
-        }
-
-        #gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
-            margin: 20px 0 0;
-        }
-
-        #gallery li img {
-            width: 300px;
-            height: auto;
-            border-radius: 10px;
+        #modal-message {
+            color: #2b8754; /* Bright green text */
         }
     </style>
-    <script>
-        // JavaScript for modal popup
-        window.onload = function () {
-            const modalOverlay = document.getElementById("modal-overlay");
-            const pageContent = document.getElementById("page");
-            const favoriteDestinationInput = document.getElementById("favorite-destination-input");
-            const modalMessage = document.getElementById("modal-message");
-            const submitButton = document.getElementById("submit-destination");
-
-            // Show modal and blur background on page load
-            modalOverlay.classList.add("visible");
-            pageContent.classList.add("modal-blur");
-
-            // Handle user input and close modal
-            submitButton.onclick = function () {
-                const destination = favoriteDestinationInput.value.trim();
-                if (destination) {
-                    modalMessage.textContent = `That's a wonderful choice, ${destination}! I hope you visit it soon!`;
-                } else {
-                    modalMessage.textContent = "It's okay, traveling anywhere can be an adventure!";
-                }
-
-                // Wait for a few seconds before closing the modal
-                setTimeout(() => {
-                    modalOverlay.classList.remove("visible");
-                    pageContent.classList.remove("modal-blur");
-                }, 2000);
-            };
-        };
-    </script>
 </head>
 <body>
     <div id="header">
@@ -121,8 +88,7 @@
             </a>
             <div id="navigation">
                 <ul>
-                    <li class="selected"><a href="modified-index.html">Home</a>
-                    </li>
+                    <li class="selected"><a href="modified-index.html">Home</a></li>
                     <li><a href="work.html">Work</a></li>
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="about.html">About</a></li>
@@ -134,16 +100,9 @@
     <div id="page">
         <div id="contents">
             <div id="welcome">
-                <h2 id="welcome-message">Welcome to WanderFocus!</h2>
+                <h2 id="welcome-message">Welcome to WanderFocus - Modified Page!</h2>
                 <p>
-                    Hello! WanderFocus is a space dedicated to celebrating the beauty of traveling and capturing moments through the lens of a camera. Explore the world, one frame at a time, and discover the stories behind each destination.
-                </p>
-                
-                <p>
-                    Join me as I share my adventures, tips, and snapshots from breathtaking locations around the globe. Whether you're an avid traveler or an aspiring photographer, there's something here for everyone!
-                </p>
-                <p>
-                    This website has gone through multiple modifications. The design and layout were enhanced using CSS, while interactive elements such as modals were powered by JavaScript. Each change reflects a step closer to creating a seamless and visually appealing user experience.
+                    This is a modified version of WanderFocus's homepage with a dark green theme. The changes reflect a fresh and immersive design.
                 </p>
             </div>
             <div id="featured">
@@ -160,8 +119,6 @@
                     </li>
                 </ul>
             </div>
-            
-            
         </div>
         <div id="footer">
             <div id="connect">
@@ -189,11 +146,7 @@
             <p id="modal-message" style="margin-top: 15px;"></p>
         </div>
     </div>
-    
-    
-</div>
-
-    </div>
 </body>
 </html>
+
 

@@ -1,0 +1,219 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d; /* Black background for a sleek look */
+    color: #e5e5e5; /* Soft light gray text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #212121; /* Dark gray for header */
+    color: #ffffff; /* White text for visibility */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+#header #logo img {
+    width: 350px; /* Optimized logo size */
+    height: auto;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+#navigation ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+#navigation ul li a {
+    color: #a6e3a1; /* Soft green for links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+#navigation ul li a:hover {
+    color: #d3fbd8; /* Lighter green on hover */
+    text-decoration: underline;
+}
+
+#contents {
+    padding: 40px;
+    background-color: #181818; /* Deep black-gray for contrast */
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Enhanced shadow for depth */
+    margin: 40px auto;
+    max-width: 900px; /* Slightly smaller width for cleaner look */
+    text-align: center;
+}
+
+#footer {
+    background-color: #101010; /* Deep black-gray footer */
+    color: #a1a1a1; /* Neutral gray text */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid #333333; /* Subtle border for separation */
+}
+
+button {
+    background-color: #5dbb63; /* Calming green button */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 15px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #48a353; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Gallery Styles */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+#gallery li {
+    flex: 1 1 calc(33.33% - 40px); /* Responsive layout */
+    max-width: 300px;
+    text-align: center;
+}
+
+#gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px; /* Rounded corners for modern look */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.08); /* Slight zoom effect */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Text Styles */
+h2 {
+    color: #a6e3a1; /* Soft green text for headings */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h5 {
+    color: #91c99b; /* Muted green for subheadings */
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.8;
+    color: #cccccc; /* Soft gray text for readability */
+}
+
+/* Footer Links */
+#footer a {
+    color: #6fbf73; /* Green for footer links */
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #5da55f; /* Slightly darker green on hover */
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#modal-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal {
+    background: #202020; /* Dark gray modal */
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+    width: 400px;
+    z-index: 1100;
+}
+
+#modal h3 {
+    color: #a6e3a1; /* Green for modal title */
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#modal input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #5dbb63; /* Green border */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #ffffff; /* White text */
+    background: #181818; /* Dark input background */
+}
+
+#modal input::placeholder {
+    color: #bbbbbb; /* Light gray placeholder */
+}
+
+#modal button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #5dbb63; /* Green button */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#modal button:hover {
+    background-color: #48a353; /* Darker green on hover */
+    transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+#modal-message {
+    margin-top: 20px;
+    color: #5dbb63; /* Green text for messages */
+    font-weight: bold;
+    font-size: 16px;
+}
