@@ -14,7 +14,7 @@ img {
 /*------------------------------ HEADER ------------------------------*/
 #header {
 	background: url(../images/bg-header.png) no-repeat center top;
-	height: 631px;
+	height: 400px;
 	margin-bottom: 18px;
 }
 #header > div {
