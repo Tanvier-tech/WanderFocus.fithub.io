@@ -67,7 +67,7 @@ button {
     cursor: pointer;
     border-radius: 5px;
     font-weight: bold;
-    font-size: 16px;
+    font-size: 30px;
 }
 
 button:hover {
@@ -107,13 +107,13 @@ button:hover {
 /* Text Styles */
 h2 {
     color: #ffffff; /* Pure white text for headings */
-    font-size: 30px;
+    font-size: 50px;
     margin-bottom: 25px;
 }
 
 h5 {
     color: #a0f1b8; /* Soft pastel green for smaller headings */
-    font-size: 22px;
+    font-size: 30px;
     margin-bottom: 20px;
 }
 
