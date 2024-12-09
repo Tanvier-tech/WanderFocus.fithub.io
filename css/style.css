@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #2b2f38; /* Dark gray-blue background for a modern look */
+    color: #f0f0f0; /* Light gray text for contrast */
+    margin: 0;
+    padding: 0;
+}
+
+#header {
+    background-color: #1e2530; /* Deep blue-gray */
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+}
+
+#header #logo img {
+    width:400px; /* Larger logo for better visibility */
+    height: auto;
+}
+
+#navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navigation ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+#navigation ul li a {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#navigation ul li a:hover {
+    color: #d1e7ff; /* Soft blue hover color */
+    text-decoration: underline;
+}
+
+#contents {
+    padding: 30px;
+    background-color: #3a414d; /* Neutral slate color for contrast */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    margin: 30px auto;
+    max-width: 1000px; /* Wider content area */
+    text-align: center;
+}
+
+#footer {
+    background-color: #1a2028; /* Very dark blue-gray */
+    color: #d1d1d1; /* Soft gray text */
+    padding: 25px 0;
+    text-align: center;
+    font-size: 15px;
+}
+
+button {
+    background-color: #5cdb95; /* Bright green button for contrast */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45b584; /* Slightly darker green on hover */
+}
+
+/* Gallery Styles */
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 30px 0;
+}
+
+#gallery li {
+    flex: 1 1 calc(33.33% - 50px); /* Adjust for spacing */
+    max-width: 350px; /* Slightly larger images */
+    text-align: center;
+}
+
+#gallery img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Larger rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhanced shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#gallery img:hover {
+    transform: scale(1.1); /* Slightly more pronounced zoom */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Text Styles */
+h2 {
+    color: #ffffff; /* Pure white text for headings */
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+h5 {
+    color: #a8e0ff; /* Soft pastel blue for smaller headings */
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.8;
+    color: #e0e0e0; /* Soft gray text for readability */
+}
+
+.uppercase {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Footer Links */
+#footer a {
+    color: #88c0d0; /* Calm cyan links */
+    text-decoration: none;
+}
+
+#footer a:hover {
+    color: #66aabf; /* Slightly darker cyan on hover */
+    text-decoration: underline;
+}
+/* Modal Styles */
+#modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#modal-overlay.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+#modal {
+    background: #ffffff; /* Bright white background */
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 400px;
+    z-index: 1100;
+}
+
+#modal h3 {
+    color: #333333; /* Dark gray for high visibility */
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#modal input {
+    width: 90%;
+    padding: 12px;
+    margin-top: 10px;
+    border: 1px solid #555; /* Subtle border */
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333333; /* Dark gray text */
+    background: #f9f9f9; /* Light gray input background */
+}
+
+#modal input::placeholder {
+    color: #777777; /* Subtle placeholder text */
+}
+
+#modal button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue button */
+    color: #ffffff; /* White text */
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#modal button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#modal-message {
+    margin-top: 20px;
+    color: #007bff; /* Bright blue for confirmation */
+    font-weight: bold;
+    font-size: 16px;
+}
+

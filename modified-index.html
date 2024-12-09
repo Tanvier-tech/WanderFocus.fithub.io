@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderFocus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* CSS for modal popup */
+        #modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        #modal-overlay.visible {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        #modal {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            z-index: 1100;
+        }
+
+        #modal input {
+            width: 80%;
+            padding: 8px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        #modal button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        #modal button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Blur background when modal is active */
+        #page.modal-blur {
+            filter: blur(5px);
+            pointer-events: none;
+        }
+
+        #gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        #gallery li img {
+            width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        // JavaScript for modal popup
+        window.onload = function () {
+            const modalOverlay = document.getElementById("modal-overlay");
+            const pageContent = document.getElementById("page");
+            const favoriteDestinationInput = document.getElementById("favorite-destination-input");
+            const modalMessage = document.getElementById("modal-message");
+            const submitButton = document.getElementById("submit-destination");
+
+            // Show modal and blur background on page load
+            modalOverlay.classList.add("visible");
+            pageContent.classList.add("modal-blur");
+
+            // Handle user input and close modal
+            submitButton.onclick = function () {
+                const destination = favoriteDestinationInput.value.trim();
+                if (destination) {
+                    modalMessage.textContent = `That's a wonderful choice, ${destination}! I hope you visit it soon!`;
+                } else {
+                    modalMessage.textContent = "It's okay, traveling anywhere can be an adventure!";
+                }
+
+                // Wait for a few seconds before closing the modal
+                setTimeout(() => {
+                    modalOverlay.classList.remove("visible");
+                    pageContent.classList.remove("modal-blur");
+                }, 2000);
+            };
+        };
+    </script>
+</head>
+<body>
+    <div id="header">
+        <div>
+            <a href="index.html" id="logo">
+                <img src="images/WanderFocus_logo.png" alt="WanderFocus Logo">
+            </a>
+            <div id="navigation">
+                <ul>
+                    <li class="selected"><a href="modified-index.html">Home</a>
+                    </li>
+                    <li><a href="work.html">Work</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="page">
+        <div id="contents">
+            <div id="welcome">
+                <h2 id="welcome-message">Welcome to WanderFocus!</h2>
+                <p>
+                    Hello! WanderFocus is a space dedicated to celebrating the beauty of traveling and capturing moments through the lens of a camera. Explore the world, one frame at a time, and discover the stories behind each destination.
+                </p>
+                
+                <p>
+                    Join me as I share my adventures, tips, and snapshots from breathtaking locations around the globe. Whether you're an avid traveler or an aspiring photographer, there's something here for everyone!
+                </p>
+                <p>
+                    This website has gone through multiple modifications. The design and layout were enhanced using CSS, while interactive elements such as modals were powered by JavaScript. Each change reflects a step closer to creating a seamless and visually appealing user experience.
+                </p>
+            </div>
+            <div id="featured">
+                <h5>Recent Updates</h5>
+                <ul id="gallery">
+                    <li>
+                        <img src="images/274616243_1316403252197546_8931416315293462447_n.webp" alt="Image 1">
+                    </li>
+                    <li>
+                        <img src="images/GOPR2491_original.JPG" alt="Scuba Diving Adventure">
+                    </li>
+                    <li>
+                        <img src="images/GOPR7153_original.JPG" alt="Parasailing Fun">
+                    </li>
+                </ul>
+            </div>
+            
+            
+        </div>
+        <div id="footer">
+            <div id="connect">
+                <p>Follow me on social media (Links are placeholders).</p>
+                <a href="#" class="facebook"></a> <a href="#" class="twitter"></a>
+            </div>
+            <ul class="navigation">
+                <li class="selected"><a href="index.html">Home</a></li>
+                <li><a href="work.html">Work</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <p class="uppercase">
+                Rahman Nymur - Student ID: 23229593
+            </p>
+        </div>
+    </div>
+
+    <div id="modal-overlay">
+        <div id="modal">
+            <h3>What is your favorite travel destination?</h3>
+            <input type="text" id="favorite-destination-input" placeholder="Enter your destination">
+            <button id="submit-destination">Submit</button>
+            <p id="modal-message" style="margin-top: 15px;"></p>
+        </div>
+    </div>
+    
+    
+</div>
+
+    </div>
+</body>
+</html>
+
