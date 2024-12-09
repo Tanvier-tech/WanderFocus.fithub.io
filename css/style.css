@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #012a12; /* Dark green background for a modern look */
+    background-color: #000000; /* Dark green background for a modern look */
     color: #f0f0f0; /* Light gray text for contrast */
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
 }
 
 #header #logo img {
-    width: 400px; /* Larger logo for better visibility */
+    width: 500px; /* Larger logo for better visibility */
     height: auto;
 }
 
